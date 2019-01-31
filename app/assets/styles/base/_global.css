@@ -9,3 +9,11 @@ img {
     height: auto;
     margin: 0px;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: $mainOrange;
+}
