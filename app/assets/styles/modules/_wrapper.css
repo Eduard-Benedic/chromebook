@@ -3,12 +3,11 @@
     padding-left: 18px;
     padding-right: 18px;
     max-width: 1236px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 16px;
+    margin-right: 16px;
 
     &--medium {
         max-width: 976px;
-
     }
 
     .wrapper {
@@ -18,7 +17,8 @@
 
     &--b-margin {
         margin-bottom: 1.1rem;
-      @mixin atSmall {
+      
+     @mixin atSmall {
         margin-bottom: 3.875rem;
     }
       }
