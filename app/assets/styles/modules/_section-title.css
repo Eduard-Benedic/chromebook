@@ -7,19 +7,22 @@
     @mixin atSmall {
         font-size: 3.75rem;
     }
-
+    &--blue {
+        color: $mainBlue;
+    }
     &__icon {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: .6rem;
+        margin-bottom: 0.6rem;
 
         @mixin atSmall {
-            margin-right: 0.5rem;
-            margin-left:0;
-            display: inline-block;
+            position: relative;
+            top: 10px;
+            margin-right: .5rem;
+            margin-left: 0;
             margin-bottom: 0;
-            
+            display: inline-block;
         }
     }
 }
