@@ -3,16 +3,73 @@
     position: absolute;
     width: 100%;
     z-index: 2;
-    background-color: rgba($mainBlue, 0.3); 
+    transition: background-color .3s ease-out;
+
+    &--expanded {
+        background-color: rgba($mainBlue, 0.55);
+    }
+    
+
+    @mixin atMedium {
+        background-color: rgba($mainBlue, 0.3);
+    }
 
     &__btn-container {
-        float: right;
+        @mixin atMedium {
+            float: right;
+        }
+
     }
 
     &__logo {
         position: absolute;
         top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: 50% 50%;
+        height: 100px;
         background-color: $mainBlue;
         padding: 25px 36px;
+
+        @mixin atMedium {
+            left: auto;
+            transform: translateX(0);
+            height: auto;
+        }
+    }
+
+    &__menu-icon {
+        position: absolute;
+        z-index: 10;
+        width: 20px;
+        height: 20px;
+        background-color: #FFF;
+        top: 10px;
+        right: 10px;
+
+        @mixin atMedium {
+            display: none;
+            }
+        }
+    &__menu-content {
+        opacity: 0;
+        transform: scale(1.1);
+        transition: all .3s ease-out;
+        position: relative;
+        z-index: -10;
+        padding-top: 90px;
+        text-align: center;
+
+        @mixin atMedium {
+            opacity: 1;
+            z-index: 1;
+            padding-top: 0;
+            transform: scale(1);
+        }
+    &--visible {
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1);
+     }
     }
 }
