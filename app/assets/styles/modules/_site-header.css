@@ -5,6 +5,8 @@
     z-index: 2;
     transition: background-color .3s ease-out;
 
+    
+
     &--expanded {
         background-color: rgba($mainBlue, 0.55);
     }
@@ -13,6 +15,11 @@
     @mixin atMedium {
         background-color: rgba($mainBlue, 0.3);
         position: fixed;
+       
+        &--darken {
+            background-color: rgba($mainBlue, 0.9);
+            transition: background-color 1s ease-out;
+        }
     }
 
     &__btn-container {

@@ -1053,6 +1053,12 @@ a {
         background-color: rgba(47,85,114, 0.3);
         position: fixed
 }
+       
+        .site-header--darken {
+            background-color: rgba(47,85,114, 0.9);
+            -webkit-transition: background-color 1s ease-out;
+            transition: background-color 1s ease-out;
+        }
     }
 
 @media (min-width: 800px) {

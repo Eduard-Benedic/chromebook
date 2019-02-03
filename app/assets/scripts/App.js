@@ -106,3 +106,28 @@ class RevealOnScrollTestiomonial {
 }
 
 var testimonialReveal = new RevealOnScrollTestiomonial();
+
+
+class StickyHeader {
+    constructor() {
+        this.siteHeader = document.querySelector('.site-header');
+        this.scrollToShow();
+    }
+    scrollToShow() {
+        window.addEventListener('scroll', this.darkenTheBackground.bind(this));
+    }
+
+    darkenTheBackground() {
+        var windowYHeight = window.innerHeight;
+        var logo = document.querySelector('.large-hero');
+        var siteHeader = document.querySelector('.site-header');
+        var logoCoordinates = logo.getBoundingClientRect().bottom;
+        if ( logoCoordinates < windowYHeight/2 ) {
+            siteHeader.classList.add('site-header--darken');
+        } else {
+            siteHeader.classList.remove('site-header--darken');
+        }
+    
+    }
+}
+var stickyHeader = new StickyHeader();
