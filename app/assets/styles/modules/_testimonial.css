@@ -2,7 +2,13 @@
     background-color: rgba(255,255,255, .8);
     padding: 0 18px 1px 18px;
     margin-bottom: 98px;
-
+    opacity: 0;
+    transform: scale(0.5);
+    &-reveal {
+        opacity: 1;
+        transition: all 1s ease-out;
+        transform: scale(1);
+    }
     @mixin atLarge{
         padding: 0 1.8125rem 1px 1.8125rem;
         margin-bottom: 0;

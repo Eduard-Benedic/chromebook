@@ -916,6 +916,7 @@ a {
 .feature-item {
     position: relative;
     padding-bottom: 2.5rem;
+    opacity: 0;
 }
 
 @media (min-width: 530px) {
@@ -959,7 +960,18 @@ a {
     background-color: rgba(255,255,255, .8);
     padding: 0 18px 1px 18px;
     margin-bottom: 98px;
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
 }
+
+.testimonial-reveal {
+        opacity: 1;
+        -webkit-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
 
 @media (min-width: 1010px) {
 
@@ -1038,7 +1050,8 @@ a {
 @media (min-width: 800px) {
 
 .site-header {
-        background-color: rgba(47,85,114, 0.3)
+        background-color: rgba(47,85,114, 0.3);
+        position: fixed
 }
     }
 
@@ -1256,4 +1269,16 @@ a {
 
     }
     }
+
+.reveal-item {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+
+  /*  &--is-visible {
+        opacity: 1;
+        transition: opacity 1.5s ease-out;
+    }
+    */
+}
 
