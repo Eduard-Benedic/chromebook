@@ -10,6 +10,10 @@
     &--blue {
         color: $mainBlue;
     }
+
+    &--less-margin {
+        margin-bottom: .8rem;
+    }
     &__icon {
         display: block;
         margin-left: auto;
